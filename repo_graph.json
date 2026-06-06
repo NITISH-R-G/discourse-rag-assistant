@@ -1,0 +1,434 @@
+{
+  "repo_structure": {
+    "root": {
+      "dirs": [
+        "docs",
+        "scripts",
+        "data"
+      ],
+      "files": [
+        ".gitignore",
+        "main.py",
+        ".env.example",
+        "vector_store.py",
+        "rag_pipeline.py",
+        "ingest_discourse.py",
+        ".env",
+        "requirements.txt",
+        "aipipe_client.py",
+        "repo_graph.json",
+        "models.py",
+        "docker-compose.yml",
+        "README.md"
+      ]
+    },
+    "docs": {
+      "dirs": [
+        "api",
+        "architecture"
+      ],
+      "files": []
+    },
+    "docs/api": {
+      "dirs": [],
+      "files": []
+    },
+    "docs/architecture": {
+      "dirs": [],
+      "files": [
+        "system_diagram.md"
+      ]
+    },
+    "scripts": {
+      "dirs": [
+        "repo_automation"
+      ],
+      "files": []
+    },
+    "scripts/repo_automation": {
+      "dirs": [],
+      "files": [
+        "analyze_architecture.py",
+        "ai_documentation_agent.py",
+        "README.template.md",
+        "requirements.txt",
+        "generate_diagrams.py"
+      ]
+    },
+    "data": {
+      "dirs": [],
+      "files": [
+        "index.pkl",
+        "posts.json"
+      ]
+    }
+  },
+  "file_types": {
+    ".py": 9,
+    ".example": 1,
+    ".txt": 2,
+    ".json": 2,
+    ".yml": 1,
+    ".md": 3,
+    ".pkl": 1
+  },
+  "graph_nodes": [
+    [
+      "docs",
+      {
+        "type": "dir"
+      }
+    ],
+    [
+      "root",
+      {}
+    ],
+    [
+      "scripts",
+      {
+        "type": "dir"
+      }
+    ],
+    [
+      "data",
+      {
+        "type": "dir"
+      }
+    ],
+    [
+      ".gitignore",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "main.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      ".env.example",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "vector_store.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "rag_pipeline.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "ingest_discourse.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      ".env",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "requirements.txt",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "aipipe_client.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "repo_graph.json",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "models.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "docker-compose.yml",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "README.md",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "docs/api",
+      {
+        "type": "dir"
+      }
+    ],
+    [
+      "docs/architecture",
+      {
+        "type": "dir"
+      }
+    ],
+    [
+      "docs/architecture/system_diagram.md",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "scripts/repo_automation",
+      {
+        "type": "dir"
+      }
+    ],
+    [
+      "scripts/repo_automation/analyze_architecture.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "scripts/repo_automation/ai_documentation_agent.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "scripts/repo_automation/README.template.md",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "scripts/repo_automation/requirements.txt",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "scripts/repo_automation/generate_diagrams.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "data/index.pkl",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "data/posts.json",
+      {
+        "type": "file"
+      }
+    ]
+  ],
+  "graph_edges": [
+    [
+      "docs",
+      "docs/api",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "docs",
+      "docs/architecture",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "docs",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "scripts",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "data",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      ".gitignore",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "main.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      ".env.example",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "vector_store.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "rag_pipeline.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "ingest_discourse.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      ".env",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "requirements.txt",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "aipipe_client.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "repo_graph.json",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "models.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "docker-compose.yml",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "README.md",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "scripts",
+      "scripts/repo_automation",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "data",
+      "data/index.pkl",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "data",
+      "data/posts.json",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "docs/architecture",
+      "docs/architecture/system_diagram.md",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "scripts/repo_automation",
+      "scripts/repo_automation/analyze_architecture.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "scripts/repo_automation",
+      "scripts/repo_automation/ai_documentation_agent.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "scripts/repo_automation",
+      "scripts/repo_automation/README.template.md",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "scripts/repo_automation",
+      "scripts/repo_automation/requirements.txt",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "scripts/repo_automation",
+      "scripts/repo_automation/generate_diagrams.py",
+      {
+        "type": "contains"
+      }
+    ]
+  ]
+}
