@@ -1,0 +1,49 @@
+name: Repository Intelligence Automation
+
+on:
+  push:
+    branches: [ main, master ]
+  schedule:
+    - cron: '0 0 * * 0' # Weekly
+
+permissions:
+  contents: write
+
+jobs:
+  analyze-and-document:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0 # Needed for comprehensive analysis
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r scripts/repo_automation/requirements.txt
+
+    - name: Analyze Architecture
+      run: python scripts/repo_automation/analyze_architecture.py
+
+    - name: Generate Diagrams
+      run: python scripts/repo_automation/generate_diagrams.py
+
+    - name: Run AI Documentation Agent
+      run: python scripts/repo_automation/ai_documentation_agent.py
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+    - name: Commit Generated Documentation
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add repo_graph.json docs/architecture/system_diagram.md README.md
+        # Only commit if there are changes
+        git diff --staged --quiet || git commit -m "docs: Auto-update repository architecture, diagrams, and README"
+        git push
