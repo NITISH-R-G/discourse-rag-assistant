@@ -12,51 +12,51 @@ The following diagram illustrates the internal directory and file dependencies, 
 
 ```mermaid
 graph TD;
-    docs["docs"] --> docs_architecture["docs/architecture"];
+    scripts["scripts"] --> scripts_repo_automation["scripts/repo_automation"];
+    root["root"] --> scripts["scripts"];
     root["root"] --> docs["docs"];
     root["root"] --> tests["tests"];
-    root["root"] --> scripts["scripts"];
     root["root"] --> data["data"];
+    root["root"] --> README_md["README.md"];
+    root["root"] --> aipipe_client_py["aipipe_client.py"];
+    root["root"] --> models_py["models.py"];
+    root["root"] --> requirements_txt["requirements.txt"];
+    root["root"] --> _env[".env"];
     root["root"] --> vector_store_py["vector_store.py"];
+    root["root"] --> repo_graph_json["repo_graph.json"];
+    root["root"] --> _env_example[".env.example"];
     root["root"] --> main_py["main.py"];
     root["root"] --> _gitignore[".gitignore"];
-    root["root"] --> requirements_txt["requirements.txt"];
-    root["root"] --> ingest_discourse_py["ingest_discourse.py"];
-    root["root"] --> models_py["models.py"];
     root["root"] --> docker_compose_yml["docker-compose.yml"];
-    root["root"] --> aipipe_client_py["aipipe_client.py"];
-    root["root"] --> repo_graph_json["repo_graph.json"];
-    root["root"] --> _env[".env"];
-    root["root"] --> _env_example[".env.example"];
-    root["root"] --> README_md["README.md"];
     root["root"] --> rag_pipeline_py["rag_pipeline.py"];
+    root["root"] --> ingest_discourse_py["ingest_discourse.py"];
+    docs["docs"] --> docs_architecture["docs/architecture"];
     tests["tests"] --> tests_test_dummy_py["tests/test_dummy.py"];
-    scripts["scripts"] --> scripts_repo_automation["scripts/repo_automation"];
-    data["data"] --> data_posts_json["data/posts.json"];
     data["data"] --> data_index_pkl["data/index.pkl"];
-    docs_architecture["docs/architecture"] --> docs_architecture_system_diagram_md["docs/architecture/system_diagram.md"];
-    scripts_repo_automation["scripts/repo_automation"] --> scripts_repo_automation_generate_diagrams_py["scripts/repo_automation/generate_diagrams.py"];
-    scripts_repo_automation["scripts/repo_automation"] --> scripts_repo_automation_requirements_txt["scripts/repo_automation/requirements.txt"];
+    data["data"] --> data_posts_json["data/posts.json"];
     scripts_repo_automation["scripts/repo_automation"] --> scripts_repo_automation_analyze_architecture_py["scripts/repo_automation/analyze_architecture.py"];
-    scripts_repo_automation["scripts/repo_automation"] --> scripts_repo_automation_README_template_md["scripts/repo_automation/README.template.md"];
+    scripts_repo_automation["scripts/repo_automation"] --> scripts_repo_automation_requirements_txt["scripts/repo_automation/requirements.txt"];
+    scripts_repo_automation["scripts/repo_automation"] --> scripts_repo_automation_generate_diagrams_py["scripts/repo_automation/generate_diagrams.py"];
     scripts_repo_automation["scripts/repo_automation"] --> scripts_repo_automation_ai_documentation_agent_py["scripts/repo_automation/ai_documentation_agent.py"];
+    scripts_repo_automation["scripts/repo_automation"] --> scripts_repo_automation_README_template_md["scripts/repo_automation/README.template.md"];
+    docs_architecture["docs/architecture"] --> docs_architecture_system_diagram_md["docs/architecture/system_diagram.md"];
 ```
 
 ## Technology Stack
 
 Detected file types in the repository:
 
+- `.md`: 3 files
+
 - `.py`: 10 files
 
 - `.txt`: 2 files
-
-- `.yml`: 1 files
 
 - `.json`: 2 files
 
 - `.example`: 1 files
 
-- `.md`: 3 files
+- `.yml`: 1 files
 
 - `.pkl`: 1 files
 
@@ -66,8 +66,16 @@ Detected file types in the repository:
 Automatically generated view of the repository components:
 
 ### `root`
-- **Directories**: docs, tests, scripts, data
-- **Files**: vector_store.py, main.py, .gitignore, requirements.txt, ingest_discourse.py, models.py, docker-compose.yml, aipipe_client.py, repo_graph.json, .env, .env.example, README.md, rag_pipeline.py
+- **Directories**: scripts, docs, tests, data
+- **Files**: README.md, aipipe_client.py, models.py, requirements.txt, .env, vector_store.py, repo_graph.json, .env.example, main.py, .gitignore, docker-compose.yml, rag_pipeline.py, ingest_discourse.py
+
+### `scripts`
+- **Directories**: repo_automation
+- **Files**: None
+
+### `scripts/repo_automation`
+- **Directories**: None
+- **Files**: analyze_architecture.py, requirements.txt, generate_diagrams.py, ai_documentation_agent.py, README.template.md
 
 ### `docs`
 - **Directories**: architecture
@@ -81,17 +89,9 @@ Automatically generated view of the repository components:
 - **Directories**: None
 - **Files**: test_dummy.py
 
-### `scripts`
-- **Directories**: repo_automation
-- **Files**: None
-
-### `scripts/repo_automation`
-- **Directories**: None
-- **Files**: generate_diagrams.py, requirements.txt, analyze_architecture.py, README.template.md, ai_documentation_agent.py
-
 ### `data`
 - **Directories**: None
-- **Files**: posts.json, index.pkl
+- **Files**: index.pkl, posts.json
 
 
 ## Setup Instructions
