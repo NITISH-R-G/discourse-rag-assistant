@@ -3,24 +3,24 @@
     "root": {
       "dirs": [
         "scripts",
-        "docs",
+        "data",
         "tests",
-        "data"
+        "docs"
       ],
       "files": [
-        "README.md",
-        "aipipe_client.py",
-        "models.py",
-        "requirements.txt",
-        ".env",
-        "vector_store.py",
-        "repo_graph.json",
-        ".env.example",
-        "main.py",
         ".gitignore",
+        "main.py",
+        ".env.example",
+        "README.md",
+        "ingest_discourse.py",
+        "requirements.txt",
+        "repo_graph.json",
+        "vector_store.py",
         "docker-compose.yml",
+        "aipipe_client.py",
+        ".env",
         "rag_pipeline.py",
-        "ingest_discourse.py"
+        "models.py"
       ]
     },
     "scripts": {
@@ -32,11 +32,24 @@
     "scripts/repo_automation": {
       "dirs": [],
       "files": [
-        "analyze_architecture.py",
-        "requirements.txt",
         "generate_diagrams.py",
-        "ai_documentation_agent.py",
-        "README.template.md"
+        "analyze_architecture.py",
+        "README.template.md",
+        "requirements.txt",
+        "ai_documentation_agent.py"
+      ]
+    },
+    "data": {
+      "dirs": [],
+      "files": [
+        "posts.json",
+        "index.pkl"
+      ]
+    },
+    "tests": {
+      "dirs": [],
+      "files": [
+        "test_dummy.py"
       ]
     },
     "docs": {
@@ -50,27 +63,14 @@
       "files": [
         "system_diagram.md"
       ]
-    },
-    "tests": {
-      "dirs": [],
-      "files": [
-        "test_dummy.py"
-      ]
-    },
-    "data": {
-      "dirs": [],
-      "files": [
-        "index.pkl",
-        "posts.json"
-      ]
     }
   },
   "file_types": {
-    ".md": 3,
     ".py": 10,
+    ".example": 1,
+    ".md": 3,
     ".txt": 2,
     ".json": 2,
-    ".example": 1,
     ".yml": 1,
     ".pkl": 1
   },
@@ -86,7 +86,7 @@
       {}
     ],
     [
-      "docs",
+      "data",
       {
         "type": "dir"
       }
@@ -98,55 +98,13 @@
       }
     ],
     [
-      "data",
+      "docs",
       {
         "type": "dir"
       }
     ],
     [
-      "README.md",
-      {
-        "type": "file"
-      }
-    ],
-    [
-      "aipipe_client.py",
-      {
-        "type": "file"
-      }
-    ],
-    [
-      "models.py",
-      {
-        "type": "file"
-      }
-    ],
-    [
-      "requirements.txt",
-      {
-        "type": "file"
-      }
-    ],
-    [
-      ".env",
-      {
-        "type": "file"
-      }
-    ],
-    [
-      "vector_store.py",
-      {
-        "type": "file"
-      }
-    ],
-    [
-      "repo_graph.json",
-      {
-        "type": "file"
-      }
-    ],
-    [
-      ".env.example",
+      ".gitignore",
       {
         "type": "file"
       }
@@ -158,19 +116,13 @@
       }
     ],
     [
-      ".gitignore",
+      ".env.example",
       {
         "type": "file"
       }
     ],
     [
-      "docker-compose.yml",
-      {
-        "type": "file"
-      }
-    ],
-    [
-      "rag_pipeline.py",
+      "README.md",
       {
         "type": "file"
       }
@@ -182,13 +134,73 @@
       }
     ],
     [
+      "requirements.txt",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "repo_graph.json",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "vector_store.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "docker-compose.yml",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "aipipe_client.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      ".env",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "rag_pipeline.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "models.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
       "scripts/repo_automation",
       {
         "type": "dir"
       }
     ],
     [
+      "scripts/repo_automation/generate_diagrams.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
       "scripts/repo_automation/analyze_architecture.py",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "scripts/repo_automation/README.template.md",
       {
         "type": "file"
       }
@@ -200,19 +212,25 @@
       }
     ],
     [
-      "scripts/repo_automation/generate_diagrams.py",
-      {
-        "type": "file"
-      }
-    ],
-    [
       "scripts/repo_automation/ai_documentation_agent.py",
       {
         "type": "file"
       }
     ],
     [
-      "scripts/repo_automation/README.template.md",
+      "data/posts.json",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "data/index.pkl",
+      {
+        "type": "file"
+      }
+    ],
+    [
+      "tests/test_dummy.py",
       {
         "type": "file"
       }
@@ -225,24 +243,6 @@
     ],
     [
       "docs/architecture/system_diagram.md",
-      {
-        "type": "file"
-      }
-    ],
-    [
-      "tests/test_dummy.py",
-      {
-        "type": "file"
-      }
-    ],
-    [
-      "data/index.pkl",
-      {
-        "type": "file"
-      }
-    ],
-    [
-      "data/posts.json",
       {
         "type": "file"
       }
@@ -265,7 +265,7 @@
     ],
     [
       "root",
-      "docs",
+      "data",
       {
         "type": "contains"
       }
@@ -279,70 +279,7 @@
     ],
     [
       "root",
-      "data",
-      {
-        "type": "contains"
-      }
-    ],
-    [
-      "root",
-      "README.md",
-      {
-        "type": "contains"
-      }
-    ],
-    [
-      "root",
-      "aipipe_client.py",
-      {
-        "type": "contains"
-      }
-    ],
-    [
-      "root",
-      "models.py",
-      {
-        "type": "contains"
-      }
-    ],
-    [
-      "root",
-      "requirements.txt",
-      {
-        "type": "contains"
-      }
-    ],
-    [
-      "root",
-      ".env",
-      {
-        "type": "contains"
-      }
-    ],
-    [
-      "root",
-      "vector_store.py",
-      {
-        "type": "contains"
-      }
-    ],
-    [
-      "root",
-      "repo_graph.json",
-      {
-        "type": "contains"
-      }
-    ],
-    [
-      "root",
-      ".env.example",
-      {
-        "type": "contains"
-      }
-    ],
-    [
-      "root",
-      "main.py",
+      "docs",
       {
         "type": "contains"
       }
@@ -356,7 +293,70 @@
     ],
     [
       "root",
+      "main.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      ".env.example",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "README.md",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "ingest_discourse.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "requirements.txt",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "repo_graph.json",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "vector_store.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
       "docker-compose.yml",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      "aipipe_client.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "root",
+      ".env",
       {
         "type": "contains"
       }
@@ -370,28 +370,7 @@
     ],
     [
       "root",
-      "ingest_discourse.py",
-      {
-        "type": "contains"
-      }
-    ],
-    [
-      "docs",
-      "docs/architecture",
-      {
-        "type": "contains"
-      }
-    ],
-    [
-      "tests",
-      "tests/test_dummy.py",
-      {
-        "type": "contains"
-      }
-    ],
-    [
-      "data",
-      "data/index.pkl",
+      "models.py",
       {
         "type": "contains"
       }
@@ -404,15 +383,22 @@
       }
     ],
     [
-      "scripts/repo_automation",
-      "scripts/repo_automation/analyze_architecture.py",
+      "data",
+      "data/index.pkl",
       {
         "type": "contains"
       }
     ],
     [
-      "scripts/repo_automation",
-      "scripts/repo_automation/requirements.txt",
+      "tests",
+      "tests/test_dummy.py",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "docs",
+      "docs/architecture",
       {
         "type": "contains"
       }
@@ -426,7 +412,7 @@
     ],
     [
       "scripts/repo_automation",
-      "scripts/repo_automation/ai_documentation_agent.py",
+      "scripts/repo_automation/analyze_architecture.py",
       {
         "type": "contains"
       }
@@ -434,6 +420,20 @@
     [
       "scripts/repo_automation",
       "scripts/repo_automation/README.template.md",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "scripts/repo_automation",
+      "scripts/repo_automation/requirements.txt",
+      {
+        "type": "contains"
+      }
+    ],
+    [
+      "scripts/repo_automation",
+      "scripts/repo_automation/ai_documentation_agent.py",
       {
         "type": "contains"
       }
